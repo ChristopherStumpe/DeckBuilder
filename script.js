@@ -21,6 +21,10 @@ window.onload = function() {
 //shit from school that cleans up code automatically
 // error catcher
 // team w paul?
+//test
 //live save?
 //css stuff
 //node?
+//refresh on async functions
+//try to run in browser and if it bogs switch to node
+// look into web workers to lighten memory
