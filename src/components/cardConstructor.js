@@ -11,4 +11,4 @@ class Person {
 const quinton = new Person("Quinton");
 
 quinton.introduce(); 
-export const Person;
+export {Person}

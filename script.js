@@ -1,5 +1,6 @@
 window.onload = function() {
     const gameContainer = document.getElementById('game-container');
+    const leftCard = document.getElementById('left-card');
 
     // Example game: Change background color on click
     gameContainer.addEventListener('click', function() {
@@ -14,7 +15,27 @@ window.onload = function() {
         }
         return color;
     }
+    // move this once working
+    class Card {
+        constructor(name) {
+            this.name = name;
+        }
+    
+        testConsole() {
+            console.log(`This Card's name is ${this.name}`);
+        }
+    }
+    
+    const quinton = new Card("Quintons Card");
+    leftCard.textContent = quinton.name
+    
+    quinton.testConsole(); 
 }
+//make new card button
+//make swap views button
+//make swap cards button?
+
+
 //Typescript?
 //Live updates extension?
 //look up classes
@@ -24,7 +45,8 @@ window.onload = function() {
 //test
 //live save?
 //css stuff
-//node?
+//node? not for now, use in browser for now
 //refresh on async functions
 //try to run in browser and if it bogs switch to node
 // look into web workers to lighten memory
+//checks before pushing/committing

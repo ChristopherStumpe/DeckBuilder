@@ -10,3 +10,40 @@ body {
     border: 1px solid #000;
     margin-top: 20px;
 }
+
+#left-card {
+    width: 50%;
+    height: 200 px;
+    background-color: aqua;
+    border: 1px solid #000;
+    margin-top: 20px;
+}
+
+#right-card {
+    width: 50%;
+    height: 200 px;
+    background-color: aqua;
+    border: 1px solid #000;
+    margin-top: 20px;
+}
+
+#center-card {
+    width: 50%;
+    height: 200 px;
+    background-color: aqua;
+    border: 1px solid #000;
+    margin-top: 20px;
+}
+
+.three-card-container {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1; /*Takes up equal width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+/* reminder: . is for class and # is for id */
