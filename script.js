@@ -1,11 +1,24 @@
 window.onload = function() {
-    const gameContainer = document.getElementById('game-container');
+    // const gameContainer = document.getElementById('game-container');
     const leftCard = document.getElementById('left-card');
+    const rightCard = document.getElementById('right-card');
+    const centerCard = document.getElementById('center-card');
 
     // Example game: Change background color on click
-    gameContainer.addEventListener('click', function() {
-        gameContainer.style.backgroundColor = getRandomColor();
+    // gameContainer.addEventListener('click', function() {
+    //     gameContainer.style.backgroundColor = getRandomColor();
+    // });
+    
+    leftCard.addEventListener('click', function() {
+        leftCard.textContent = 'you clicked me';
     });
+    centerCard.addEventListener('click', function() {
+        centerCard.textContent = 'you clicked me'
+    })
+    rightCard.addEventListener('click', function() {
+        rightCard.textContent = 'you clicked me'
+        
+    })
 
     function getRandomColor() { 
         const letters = '0123456789ABCDEF';
@@ -50,3 +63,4 @@ window.onload = function() {
 //try to run in browser and if it bogs switch to node
 // look into web workers to lighten memory
 //checks before pushing/committing
+//build tests
