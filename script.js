@@ -1,4 +1,5 @@
-import { cardLibrary } from "./src/data/cards";
+// import { cardLibrary } from "./src/data/cards";
+// import { cardShuffler } from "./src/utils/shuffler"
 window.onload = function() {
     // const gameContainer = document.getElementById('game-container');
     const leftCard = document.getElementById('left-card');
@@ -39,11 +40,46 @@ window.onload = function() {
     //         console.log(`This Card's name is ${this.name}`);
     //     }
     // }
+
+    //test section
+    class Card {
+        constructor(name, type, rarity, description) {
+            this.name = name;
+            this.type
+            //type should be either starter, common, uncommon, or rare
+            this.rarity
+            this.description
+            this.logic
+            this.image
+            //build require error throws on cards
+        }
+    }
+    const cardLibrary = {}
+    cardLibrary.attack = new Card("Basic Attack", "attack", "starter", "Starting Attack. Boring");
+    cardLibrary.defense = new Card("Basic Defense", "defense", "starter", "Starting Defense. Basic");
+    cardLibrary.test1 = new Card("test1")
+    cardLibrary.test2 = new Card("test2")
+    
+    function cardShuffler (deck) {
+        //take card library and output mixed order. array? but only put in correct ones. will need to limit by various things at times.
+        //can expand when necessary
+        //just need three?
+        const libraryArray = Object.keys(deck);
+        for (let i = libraryArray.length - 1; i > 0; i--){
+            const j = Math.floor(Math.random() * (i + 1));
+            [libraryArray[i], libraryArray[j]] = [libraryArray[j], libraryArray[i]]
+        }
+        console.log(libraryArray)
+        return libraryArray;
+    }
+
+    //end test section
     
     const quinton = new Card("Quintons Card");
     leftCard.textContent = quinton.name
     
-    quinton.testConsole(); 
+    // quinton.testConsole(); 
+    cardShuffler(cardLibrary)
 }
 //make new card button
 //make swap views button
