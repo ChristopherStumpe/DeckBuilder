@@ -1,3 +1,4 @@
+import { cardLibrary } from "./src/data/cards";
 window.onload = function() {
     // const gameContainer = document.getElementById('game-container');
     const leftCard = document.getElementById('left-card');
@@ -20,24 +21,24 @@ window.onload = function() {
         
     })
 
-    function getRandomColor() { 
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
+    // function getRandomColor() { 
+    //     const letters = '0123456789ABCDEF';
+    //     let color = '#';
+    //     for (let i = 0; i < 6; i++) {
+    //         color += letters[Math.floor(Math.random() * 16)];
+    //     }
+    //     return color;
+    // }
     // move this once working
-    class Card {
-        constructor(name) {
-            this.name = name;
-        }
+    // class Card {
+    //     constructor(name) {
+    //         this.name = name;
+    //     }
     
-        testConsole() {
-            console.log(`This Card's name is ${this.name}`);
-        }
-    }
+    //     testConsole() {
+    //         console.log(`This Card's name is ${this.name}`);
+    //     }
+    // }
     
     const quinton = new Card("Quintons Card");
     leftCard.textContent = quinton.name
@@ -56,7 +57,6 @@ window.onload = function() {
 // error catcher
 // team w paul?
 //test
-//live save?
 //css stuff
 //node? not for now, use in browser for now
 //refresh on async functions
