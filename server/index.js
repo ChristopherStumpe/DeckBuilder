@@ -1,12 +1,26 @@
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import App from '../client/src/App'
+// import '../client/src/index.css'
+// function App() {
+    // return <h1>Hello from integrated React!</h1>;
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('react-root'));
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// root.render(<App />)
+// root.render(<React.StrictMode> <App /> </React.StrictMode>)
 const express = require('express');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const cors = require('cors');
+const app = express();
 
 require('dotenv').config();
 
-const app = express();
 app.use(cors());
 app.use(express.json());
+const PORT = process.env.PORT || 3000;
 
 // mongoose.connect(process.env.MONGO_URI)
 
@@ -41,7 +55,6 @@ app.get('/api/player/:username', async (req, res) => {
     res.json(player)
 })
 
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 
 //promise?
