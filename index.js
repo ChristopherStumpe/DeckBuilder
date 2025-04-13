@@ -8,19 +8,22 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI)
+// mongoose.connect(process.env.MONGO_URI)
 
 //add confirm it connected?
 
-const playerSchema = new mongoose.Schema({
-    username: String,
-    score: Number,
-    level: Number,
-})
+// const playerSchema = new mongoose.Schema({
+//     username: String,
+//     score: Number,
+//     level: Number,
+// })
 
 // ?
-const Player = mongoose.model('Player', playerSchema);
-
+// const Player = mongoose.model('Player', playerSchema);
+app.get('/test', async (req, res) => {
+    console.log('test recieved')
+    res.json('test confirmed') 
+})
 //example api: save player data
 app.post('/api/save', async (req, res) => {
     const { username, score, level } = req.body;
@@ -49,3 +52,4 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 //test api is good test
 //clean up notes and legacy
 //refresh async
+//postman request testing
