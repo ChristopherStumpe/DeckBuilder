@@ -1,4 +1,3 @@
-// import {Card} from '/src/components/cardConstructor.js'
 class Card {
     constructor(name, type, rarity, description) {
         this.name = name;
