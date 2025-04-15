@@ -1,16 +1,3 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import App from '../client/src/App'
-// import '../client/src/index.css'
-// function App() {
-    // return <h1>Hello from integrated React!</h1>;
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById('react-root'));
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// root.render(<App />)
-// root.render(<React.StrictMode> <App /> </React.StrictMode>)
 const express = require('express');
 // const mongoose = require('mongoose');
 const cors = require('cors');
@@ -59,10 +46,8 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 
 //promise?
 //test try catch stuff
-//prettify
 //test before commit
 //standard test dev
 //test api is good test
 //clean up notes and legacy
 //refresh async
-//postman request testing
