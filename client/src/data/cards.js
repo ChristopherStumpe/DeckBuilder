@@ -21,11 +21,15 @@ class Card {
         //build require error throws on cards
     }
 }
+//this should be in server?
 const cardLibrary = {}
 //change names?
+//i dont think my prettier is running, or my linter or whatever.
 function barricadeLogic() {}
+function shatter() {}
 cardLibrary.attack = new Card("Basic Attack", "attack", "starter", "Starting Attack. Boring");
 cardLibrary.defense = new Card("Basic Defense", "skill", "starter", "Starting Defense. Basic");
 cardLibrary.barricade = new Card("Barricade", "power", "rare", "Block persists between turns", barricadeLogic, 'imagefiller')
+cardLibrary.breakThrough = new Card("Follow Through", "attack", "starter", "Starting Attack, adds shatter for 2 turns", shatter, "imagefiller")
 
 export {cardLibrary}
